@@ -1,0 +1,100 @@
+body {
+    display: flex; /*자식의 요소를 정렬하기 위해 쓰임*/
+    align-items: center; /*교차축*/
+    justify-content: center; /*아이템을 중앙으로 배치*/
+    height: 100px; /*세로의 크기*/
+    margin-top: 100px;
+  }
+   .container{
+    width: 300px;
+    height: 300px;
+    border: 8px solid black;
+    border-radius: 50%;
+    margin: 100px auto;
+    margin-bottom: 0px;
+    position: relative; /*상대적으로 위치*/
+    background-color: #f5f5f5;
+   }
+   .container .number{
+    position: absolute; /*조상의 위치를 상대적으로 위치*/
+    z-index: 1;
+    font-size: 20px;
+   }
+   .container #num3{
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center; /*축의 수직 방향을 기준으로 정렬*/
+    right: 1px;
+   }
+   .container #num6{
+    left: 0;
+    right: 0;
+    text-align: center; /*중앙 정렬*/
+    bottom: 0;
+   }
+   .container #num9{
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    left: 2px;
+   }
+   .container #num12{
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+   }
+  
+  .hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    background: #333;
+    transform-origin: 50% 100%;
+  }
+  
+  .hour-hand {
+    position: absolute;
+    width: 7px;
+    height: 80px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 150px;
+    transform-origin: center bottom; /*기준아래*/
+  }
+  
+  .minute-hand {
+    position: absolute;
+    width: 2px;
+    height: 110px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 150px;
+    transform-origin: center bottom;
+  }
+  
+  .second-hand {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 150px;
+    transform-origin: center bottom;
+  }
+  .center {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

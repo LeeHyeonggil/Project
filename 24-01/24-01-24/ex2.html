@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accordion{
+            background: #efefef;
+            color: #333;
+            cursor: pointer;
+            padding: 20px;
+            width: 400px;
+            border: none;
+            border-bottom: 1px dashed #999;
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.5s;
+        }
+        .acctive, .accordion:hover{
+            background: #ccc;
+        }
+        .accordion:after{
+            content: "+";
+            color: #333;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active::after{
+            content: "-";
+        }
+        .panel{
+            padding: 0 18px;
+            width: 400px;
+            max-height: 0;
+            font-size: 14px;
+            background: #fff;
+            overflow: hidden;
+            transition: all 0.2s;
+            
+        }
+    </style>
+</head>
+<body>
+    <button  class="accordion">첫 번쩨 제목입니다. </button>
+    <div class="panel">
+        <p>제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터 효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그 명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다. 모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.</p>
+    </div>
+    <button  class="accordion">두 번쩨 제목입니다. </button>
+    <div class="panel">
+        <p>제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터 효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그 명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다. 모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.</p>
+    </div>
+    <button  class="accordion">세 번쩨 제목입니다. </button>
+    <div class="panel">
+        <p>제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터 효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그 명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다. 모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.</p>
+    </div>
+    <script>
+        const acc = document.getElementsByClassName("accordion");
+        //acc[0] acc[1] acc[2] getElementsByClassName 은 배열로 저장된다.
+        for( let i = 0; i < acc.length; i++ ){
+            //미벤트가 일어난 상황을 확인 addEventListener
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling; //현재 엘리먼트의 다음 형제태그
+                if(panel.style.maxHeight){  //javascript max-height를 낙타표기법으로 씀
+                    panel.style.maxHeight = null;
+                }else{
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

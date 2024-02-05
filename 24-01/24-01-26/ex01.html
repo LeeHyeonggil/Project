@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 1. 첫 번째 문자와 마지막 문자의 위치를 바꾸어 출력하는 스크립트를 작성하라.
+    예) swift ===> twifs*/
+     </style>
+</head>
+<body>
+    <script>
+         function fl(str){
+         //길이가 1일 경우 그대로 반환
+         if(str.length < 2) {
+            return str;
+         }
+         //앞에 한자 뒤에 한자를 뺀 문자열을 추출
+         let mid = str.substring(1, str.length - 1);
+         //마지막문자, mid로 추출한 문자 , 첫 번째 문자를 합쳐서 리턴
+         return (str.charAt(str.length-1)) + mid + str.charAt(0);
+      }
+
+
+        //2. 양의 정수 x가 3또는 7의 배수인지 확인하는 함수를 작성하라.
+
+        function test2(num){
+         if(num % 3 == 0 || num % 7 == 0){
+            return true;
+         }else{
+            return false;
+         }
+      }
+    
+
+        function fl2(str){
+         if( str.length >= 3){
+            let back = str.substring(str.length - 3);
+            return back + str + back;
+         }else{
+            return false;
+         }
+      }
+
+
+        //문자열이 java로 시작하는지 확인 (Java, jAva, ... )
+      function search_java(str){
+         if(str.length < 4 ) {
+            return false;
+         }
+         let front = str.substring(0, 4).toUpperCase();
+         if(front == 'JAVA'){
+            return true;
+         }else{
+            return false;
+         }
+      }
+
+
+      console.log(fl('swift'));
+      console.log(fl('ab'));
+      console.log(fl('abc'));
+      console.log(fl2('abc'));
+      console.log(fl2('abcde'));
+      console.log(search_java('JavaScript'));
+      console.log(search_java('javaScript'));
+      console.log(search_java('Typescript'));
+      console.log(test2(1));
+
+    </script>
+</body>
+</html>

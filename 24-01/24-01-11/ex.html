@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+    <style>
+        /* div , p{                                          띄어쓰기 자손태크 & +는 형제태크 & ~ >자식만 잡힘 ,쉼표 두개명령을 한번에
+            background-color: yellowgreen;
+        }
+        div.a.b.c.d{
+            color: red;
+        }
+        div.a.b.c{
+            color: blue;
+        } */
+        ol{
+            width: 150px;
+        }
+        li:last-of-type{
+            background-color: yellowgreen;
+        }
+        /* li:nth-child(2n-1){
+            background: #ddd;
+        } */
+
+        /*
+        :nth-child(순서)
+        순서에 odd, even으로 홀짝을 쓸 수 있음
+        또 2n, 2n-1 로 써도 됨
+        */
+    </style>
+</head>
+<body>
+    <!-- <h2>셀렉트</h2>
+    <div class="a b c d"></div>
+    <div>
+        <div>
+            <section><p>문단태그 1</p></section>
+        </div>
+            <p>문단태그 2</p>
+            <p>문단태그 3</p>
+        </div>
+    <p>문단태그 4</p> -->
+    <ol>
+        <li>1번째</li>
+        <li>2번째</li>
+        <li>3번째</li>
+        <li>4번째</li>
+        <li>5번째</li>
+    </ol>
+    
+</body>
+</html>

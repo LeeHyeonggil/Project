@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container * {
+        display :block;
+        border :2px solid #333;
+        color: #999;
+        padding: 8px;
+        margin: 15px;
+
+    }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $("span").parentsUntil("div").css({ "color": "red", "border": "2px solid red"})
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        div(.container)
+        <div class="div">
+            div.div
+            <ul>ul
+                <li>il
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+        <div class="div">
+            div.div
+            <p>p
+                <span>sapn
+
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

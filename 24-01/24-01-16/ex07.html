@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imagescontainer{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #333;
+        }
+        .box{
+            max-width: 100%;
+            height: auto;
+        }
+        .box{
+            background-size: auto;
+            background-repeat: repeat;
+        }
+        .btn{
+            cursor:pointer;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imagescontainer">
+        <img id="displayedImage" src="../24-01-16/images/001.gif" alt="사진1">        
+    </div>
+        
+            <button class="btn" onclick="prev(1)">이전페이지</button>
+            <button class="btn" onclick="next(0)">다음페이지</button>
+        
+    
+
+    <script>
+        let currentImageIndex = 0;
+        const images = ["images/002.gif", "images/003.gif", "004.gif","005.gif","006.gif","007.gif","008.gif"];
+        const displayedImage = document.getElementById('displayedImage');
+      
+        function showImage(index) {
+          displayedImage.src = images[index];
+        }
+      
+        function prevImage() {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          showImage(currentImageIndex);
+        }
+      
+        function nextImage() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          showImage(currentImageIndex);
+        }
+      
+        // 초기 이미지 표시
+        showImage(currentImageIndex);
+      </script>
+</body>
+</html>

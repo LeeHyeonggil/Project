@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 임의의 양의 정수 세개가 마지막 숫자가 같은지 확인하시오.
+        //예) 10, 20, 30  ==> true  11, 10, 20 ==> false
+        
+        function last_digit(x, y, z){
+            if(x > 0 && y > 0 && z > 0){
+                return x % 10 == y % 10 && y % 10 == z % 10 && z % 10 == x % 10;
+            }else{
+                return
+            }
+        }
+        console.log(last_digit(11, 21, 19));
+        console.log(last_digit(13, 23, 22));
+        console.log(last_digit(13, 23, 23));
+    </script>
+</body>
+</html>

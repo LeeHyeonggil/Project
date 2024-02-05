@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //6. 주어진 숫자를 시간과 분으로 변환하는 스크립트를 작성하시오.
+        //예) 450 -->
+
+        function time_conv(num){
+            const hours = Math.floor(num / 60);
+            const minutes = num % 60;
+            return hours + "시간" + minutes + "분";
+        }
+
+        console.log(time_conv(450)); 
+        console.log(time_conv(550));
+        console.log(time_conv(370));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        * document.write()
+        * //팝업삼총사
+        * alert();
+        * prompt(); //사용자가 텍스트를 입력할 수 있는창
+        * confirm(); //사용자가 yes or no 선택할 수 있는창
+        */
+        const uName = prompt("당신의 이름은?", "") 
+        const uHeight= prompt("당신의 키를 입력하세요");
+        const uWeight = prompt("당신의 몸무게를 입력하세요");
+        
+         //평균체중
+         const normalweight = (uHeight - 100)*0.9;
+         let result = uWeight >= normalweight -5 && uWeight <= normalweight +5; //오차범위
+         result = result ? "적정 체중입니다." : "적정 체중이 아닙니다."
+         document.write (uName + "님은" + result);
+      </script>
+</body>
+</html>

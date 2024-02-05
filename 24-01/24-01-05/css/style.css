@@ -1,0 +1,18 @@
+.box{
+    width: 300px;
+    height: 300px;
+    border:1px solid #333;
+    /*background-color: rgba(127,255,212,0.5);
+     oapcity:0.5; 투명도를 조정한다 박스안에 모든것이 투명해짐
+    background-image:url("../images/icon.png") ;
+    background-repeat: no-repeat;
+     repeat, no-repeat, repeat-x, repeat-y, inherit
+    background-position: center; x축쓰고, y축 써준다. 
+    background-attachment: scroll;  scroll(기본), fixed 전체페이지 고정, local, inherit */
+    
+    background: rgba(127,255,212,0.3)url(../images/icon.png) no-repeat left top fixed;
+    background-size: 10%;
+    overflow-y:scroll; /* scroll, auto, overflow, overflow-x, overflow-y*/
+    
+}
+

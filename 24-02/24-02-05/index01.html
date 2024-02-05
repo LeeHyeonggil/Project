@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{
+    padding-top: 30px;
+    padding-left: 30px;
+    margin: 10px;
+}
+.box{
+    width: 400px;
+    height: 500px;
+    border: 1px solid #333;
+}
+.boxs {
+    text-align: left;
+    margin-left: 10px;
+}
+#text{
+    background-color: #eee;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    height: 30px;
+    width: 300px;
+}
+.sign{
+    display: flex;
+    width: 380px;
+}
+.sign_down{
+    width: 190px;
+    height: 30px;
+    background: red;
+    border: 1px solid red;
+}
+.sign_up{
+    width: 190px;
+    height: 30px;
+    background: green;
+    border: 1px solid green;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <div class="boxs">
+                <h1>회원가입</h1>
+                <p>아래 내용을 채워 주세요</p>
+            <div>
+                <b>이메일</b><br>
+                <input id="text" type="text" name="UserID" placeholder="  Email"><br>
+            </div>
+            <div>
+                <b>비밀번호</b><br>
+                <input id="text" type="password" name="PW" placeholder="  Enter password"><br>
+            </div>
+            <div>     
+                <b>비밀번호 확인</b><br>
+                <input id="text" type="password" name="PW" placeholder="  Repeat password"><br>
+            </div>
+            <div>   
+                <input type="checkbox">Remember me<br>
+            </div>
+            <div>    
+                <p><a href="#">개인정보</a>정책에 동의합니다.</p>
+            </div>
+            <div class="sign">
+                <button class="sign_down" type="button">Cancel</button>
+                <button class="sign_up" type="button">회원가입</button>
+            </div> 
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

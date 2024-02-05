@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <style>
+       
+        
+        body{
+            font-family: 'Diphylleia', serif;       
+        }
+        a,a:link{
+            text-decoration: overline;
+            color:green;
+        }
+        a:hover{
+            color:#1877f2;
+            text-decoration: underline;
+        }
+        a:visited{
+            color:red;
+        }
+        a:active{
+            color: #333;
+        }
+        p{
+            font-style : italic;
+            /*
+             Normal, italic, oblique
+            */
+            
+        }
+        .b{
+            font-weight : bold; 
+            /*
+            400 (normal), 500, 600, 700(bold), 800(bolder)
+            200m, 300(light)
+            */
+            font-variant : small-caps; /*nomal, small-caps*/
+        }
+        .wspace{
+            width: 300px;
+            border: 1px solid #333;
+            padding: 30px;
+            white-space: pre-wrap;
+            
+            /*
+            normal
+            nowrap//줄바꿈 금지
+            pre //html의pre와 같음
+            pre-line // pre와 같지만 줄바꿈이 허용됨, 띄어쓰기 안됨.
+            pre-wrap // pre와 같지만 줄바꿈이 허용됨, 띄어쓰기 됨.
+            inhert
+            */
+        }
+        .board{
+            width: 300px;
+            border: 1px solid #333;
+            padding: 30px;
+            /*
+             넘치는 부분 안보이게
+             줄바꿈 허용하지 않게
+             text-cverflow:ellipsis;
+            */
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+       i.fa-poo{
+        font-size: 40px;
+        color: red;
+       }
+       
+       .sns-box{
+        margin: 40px auto;
+        padding: 30px;
+        width: 200px;
+        border: 1px solid #ddd;
+        background: #efefef;
+        text-align: center;
+        box-shadow: 5px 5px 15px 0 rgba(0,0,0,.3);
+       }
+       .sns-box span{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #999;
+        text-align:center;
+        font-size: 30px;
+        line-height: 32px;
+        border-radius: 50%;
+       }
+       .facebook{
+        color: #1877f2;
+        text-shadow: 2px 2px 0 rgba(0,0,0,1);
+        /*
+        text-shadow: x축 y축 퍼지는정도 색상, x축 y축 퍼지는정도 색상;
+        */
+       }
+       .instagram{
+        color:#c13584;
+       }
+       .wt{
+        color: #fff;
+        text-shadow: 1px 0 0 #333,
+                     0 1px 0 #333,
+                     -1px 0 0 #333,
+                     0 -1px 0 #333;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="http://naver.com">네이버로 이동</a>
+    </div>
+    
+    <!-- text-indent
+    letter-spacing
+    word-spacing
+    line-heght
+    //폰트의 종류
+    sans-serif - 고딕체
+    serif - 새딕체
+    monospace 타이핑체 (가로폭이 같음)
+    cursive - 필기체
+    fantasy - 장식글꼴
+    font-family : 나눔고딕, 고딕, 바탕, 명조, sans-serif, "Times New Roman", times, serif
+    //클라이언트가 없는 폰트가 있을 수 있기 때문에 family 폰트 사용 
+    Arial 웹 안전글꼴
+    font-style : 이탤릭체 <i>fdfd</i>-->
+
+    <h1>
+        Lorem ipsum dolor sit amet.
+    </h1>
+    <p>이탤릭체</p>
+    <p class="b">Lorem ipsum dolor sit amet.</p>
+    <strong>글씨체를 두껍게 하는방법</strong>
+    <p class="wspace">
+        
+        시
+        남으로 창을 내겠소 남으로 창을 내겠소 남으로 창을 내겠소 남으로 창을 내겠소
+        어쩌구 저쩌구
+    
+    </p>
+    <p class="board">
+        남으로 창을 내겠소남으로 창을 내겠소남으로 창을 내겠소남으로 창을 내겠소남으로 창을 내겠소남으로 창을 내겠소
+    </p>
+    <i class="fa-solid fa-gamepad"></i>
+
+
+<div class="sns-box">
+    <span class="facebook">
+        <i class="fa-brands fa-facebook"></i>
+    </span>
+    <span class="instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </span>
+    
+</div>
+
+<i class="fa-brands fa-facebook-f wt"></i>
+
+
+</body>
+</html>

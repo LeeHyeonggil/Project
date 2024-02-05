@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body id="body">
+    <button onClick="changeColor()">바탕화면 색 변경</button>
+
+    <script>
+        let count = 0;
+        const colorArr = ["yellow","green","blue","pink","red","purple"];
+        document.getElementById("body").style.backgroundColor = "yellow";
+        function changeColor(){
+            count++;
+            if(count >= colorArr.length){
+                count = 0;
+            }
+            document.getElementById("body").style.backgroundColor = colorArr[count];
+        }
+
+    </script>
+    
+</body>
+</html>

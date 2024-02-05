@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3. 두 수의 합이 50~80범위 안에 있으면 65를 반환하고 그렇지 않으면 80을 반환하시오.
+
+        //1. 두 수를 더한다
+        //2. 조건을 확인 50 ~ 80 return
+        //3. 그렇지 않으면 return 80
+
+        function sortSum(x, y){
+            const sumNum = x + y;
+            if(sumNum >= 50 && sumNum <=80){
+                return 65;
+            }else{
+                return 80;
+            }
+        }
+        console.log(sortSum(30, 20));
+        console.log(sortSum(90, 80));
+    </script>
+</body>
+</html>

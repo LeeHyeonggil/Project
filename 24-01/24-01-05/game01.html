@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game01</title>
+    <style>
+        body{
+            text-align:center;  
+        }
+        
+    </style>
+</head>
+<body>
+    <p>추첨으로 반장을 뽑는 아주 엄청 민주적인 선거</p>
+    <h1 id="mem"></h1>
+    <button onclick="mem()">뽑기</button>
+    <script>
+        const member = ["김규엽", "김재영", "김환이", "류제욱", 
+                       "박홍준", "안예선","안효근", "유승희", 
+                       "윤지환", "이재권", "이하윤", "이형길", 
+                       "정소진", "조은경", "차민주", "채경철", 
+                       "최송이"];
+        //난수 0 ~ 16 까지
+    function mem() {
+        const rs = Math.floor(Math.random()*16); //0부터 16까지의 난수를 발생
+        document.getElementById("mem").innerHTML = member[rs];
+    }
+    </script>
+    
+</body>
+</html>

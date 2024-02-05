@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            font-weight: bold;
+            font-size: 5em;
+        }
+        .blue{
+            color: blue;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            // const box2 = "<div class='box2'></div>";
+            // $(".before").click(function(){
+            //     $('.box2').remove();
+            //     $(".box").before(box2);
+
+            // });
+            // $(".after").click(function(){
+            //     $('.box2').remove();
+            //     $(".box").after(box2);
+
+            // });
+            // $(".prepend").click(function(){
+            //     $('.box2').remove();
+            //     $('.box').prepend(box2);
+
+            // });
+            // $(".append").click(function(){
+            //     $('.box2').remove();
+            //     $(".box").append(box2);
+
+            // });
+            $('.size').click(function(){
+                $('p').removeClass('blue').removeClass('red');
+                $('p').toggleClass('box');
+            });
+
+            $('.blue').click(function(){
+                if($('p').hasClass('box')){
+                    alert("큰글씨입니다.");
+                }
+                $('p').removeClass('red').addClass('blue');
+            });
+
+            $('.red').click(function(){
+                $('p').removeClass('blue').addClass('red');
+            });
+
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <!-- <div class="box">123</div>
+    <button class="before">before</button>
+    <button class="after">after</button>
+    <button class="prepend">prepend</button>
+    <button class="append">append</button> -->
+    <button class="size">크기변경</button>
+    <button class="blue">파란색으로</button>
+    <button class="red">빨강색으로</button>
+    <p>안녕하세요?</p>
+</body>
+</html>

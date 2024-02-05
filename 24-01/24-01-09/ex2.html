@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        let greenAir = ["교대", "방배", "강남"];
+        let yellowAir = ["미금", "정자", "수서"];
+        
+        greenAir.splice(2, 1, "서초", "역삼"); //2번 인덱스 부터 1개의 데이터를 삭제
+        console.log(greenAir);
+
+        let rs = yellowAir.pop(); //pop은 마지막 데이터를 삭제
+        console.log(yellowAir);
+        console.log(rs);
+
+        rs = greenAir.length;
+        console.log(rs);
+
+        for(let i = 0; i < greenAir.length; i++){
+            console.log("그거슨", greenAir[i]);
+        }
+
+        rs = greenAir.shift();
+        console.log(yellowAir);
+
+        rs = greenAir.unshift("남성")
+        console.log(greenAir);
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="strname"></p>
+    <script>
+        //5. 임의의 문자열을 받으면 그 단어의 첫 글자를 대문자로 바꾸어 출력하시오.
+
+        function capital_str(str){
+            str = str.split(" ");
+            for(let i = 0; i < str.length; i++){
+                str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+            }
+            return str.join(" ");
+        }
+        document.getElementById("strname").innerHTML = capital_str("With our online editor, you can edit and test each example yourself");
+    </script>
+
+</body>
+</html>

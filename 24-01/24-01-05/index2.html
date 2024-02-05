@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sns</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 100px;
+            border: 1px solid #333;
+            /*block을 가운데 정렬 시키는 법*/
+            margin-left: auto;
+            margin-right: auto;
+            text-align:center;
+            padding:40px;
+        }
+        .container span{
+            display:inline-block;
+            width: 62px;
+            height: 62px;
+            margin: 20px 10px;
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+        .facebook{
+            background: url(../24-01-05/images/KakaoTalk_20240105_102106044.png) no-repeat;
+        }
+        .kakao{
+            background: url(../24-01-05/images/KakaoTalk_20240105_102106044.png) no-repeat -327px -70px;
+        }
+        .youtube{
+            background: url(../24-01-05/images/KakaoTalk_20240105_102106044.png) no-repeat -163px -215px;
+        }
+        .twitter{
+            background: url(../24-01-05/images/KakaoTalk_20240105_102106044.png) no-repeat -325px -0px;
+        }
+        .insta{
+            background: url(../24-01-05/images/KakaoTalk_20240105_102106044.png) no-repeat -85px -0px;
+        }
+        /*.box{
+            width:100px;
+            height:100px;
+            border:1px solid #333;
+         }
+        .box2{
+            display:inline-block;
+        }
+        .box3{
+            margin-top :30px;
+            margin-left: 50px;
+            display:block;
+        } */
+        .box{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid red;
+            outline: 10px solid green;
+            outline-offset: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box box2">block</div>
+    <span class="box box3">inline</span> -->
+    <div class="container">
+        <span class="facebook"></span>
+        <span class="kakao"></span>
+        <span class="insta"></span>
+        <span class="twitter"></span>
+        <span class="youtube"></span>
+
+        <div class="box">
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*5. 임의의 수 x, y가 모두 50~99사이에 있는지 확인하라.
+         6. 주어진 세 정수 x, y, z중 가장 큰 정수를 찾아라. 
+            (1. x, y 크기를 비교 ===> 큰 수를 찾아 z와 비교)
+         7. 주어진 두 개의 수 x, y중 100에 가까운 큰 정수를 찾는 함수를 작성하라. 단, 두 수가 같은 경우 fase를 출력한다.
+         8. 주어진 두 개의 수가 40~60 또는 70~100 범위에 있는지 확인하라.
+         9. 정수 x, y중 큰 숫자를 찾는 스크립트를 작성하라. 단 두 숫자는 40~60범위에 있다.
+         10. 주어진 문자열에서 2번째와 4번째 위치 사이에 지정된 문자가 있는지 확인하는 프로그램을 작성하라.
+            예) function check_char("문자열", "지정한문자"); 
+        */
+        
+    </script>
+</head>
+<body>
+    <script>
+        function check_number(x, y){
+            if((x >= 50 && x <= 99)&&(y >= 50 && y <= 99)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function max_of_nums(x , y , z){
+            let max_num = 0;
+            if(x > y) {
+                max_num = x;
+            }else{
+                max_num = y;
+            }
+            if(z > max_num){
+                max_num = z;
+            }
+            return max_num;
+        }
+
+        function near100(x, y){
+            if(x == y){
+                return false;
+            }else{
+                let xa = Math.abs(x - 100); //x에서 100을 뺀 절대값
+                let xy = Math.abs(y - 100); //y에서 100을 뺀 절대값
+                if(xa < xy){ //100을 뺀 두 수를 비교
+                    return x;
+                } else if(xa > xy){
+                    return y;
+                }else{ //100을 뺀 두 수가 같은떄는 숫자가 큰 수를 출력
+                    if( x > y){
+                        return x;
+                    }else{
+                        return y;
+                    }
+                }
+            }
+        }
+        
+        function num_range(x, y){
+            if((x >=40 && x <=60 && y >=40 && y <=60)||(x >=70 && x <=100 && y >=70 && y <=100)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function check_char(str, char){
+            let flug = false;
+            for(let i = 0; i < str.length; i++){
+                if((str.charAt(i) == char) && (i >= 1 && i <= 3)){
+                    flug = true;
+                    break;
+                }
+            }
+            return flug;
+        }
+    </script>
+</body>
+</html>

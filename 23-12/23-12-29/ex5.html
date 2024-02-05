@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        const id="guest";
+        const pass="1234"
+
+        const uid = prompt("아이디를 입력하세요.", "")
+        if (uid == id){
+            const upass = prompt("비밀번호를 입력하세요.", "")
+        if(pass == upass){
+            document.write("로그인 되었습니다.")
+        }
+        document.location.reload();
+        }else {
+            document.location.reload();
+        }
+        //에러 document.location.reload();
+        */
+        const id="guest"
+        const pass="1234"
+
+        const uid = prompt("아이디를 입력하세요.", "")
+        
+
+        //아이디 검증
+        if(uid == id){
+            const upass = prompt("비밀번호를 입력하세요", "");
+            if(upass == pass){
+                document.write("환영합니다." + uid + "님");
+                //비밀번호 까지 같아서 정상 로그인
+            }else{
+                alert("비밀번호가 틀렸음");
+                document.write("비밀번호 틀렸음");
+            }
+
+            }else{
+            alert("아이디가 틀렸음.");
+            //location.reload();
+            document.write("아이디도 모르는 얄미운 사람");
+        }
+
+    </script>
+
+</body>
+</html>

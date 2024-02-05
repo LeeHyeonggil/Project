@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //4. 임의의 문자열을 받아 문자열을 거꾸로 출력하시오.
+        //예) welcome ==> emoclew
+        //1. "wel come".split(" ") ===> ["wel", "come"]
+        //2. "welcome".split(" ") == ["w","e","l","c","o","m","e"]
+        //3. reverse()
+        //4. join()
+        
+        const str_reverse = (str) => {
+            return str.split("").reverse().join("");
+        }
+        console.log(str_reverse("javascript"));
+        console.log(str_reverse("홍길동 바보"));
+    </script>
+</body>
+</html>
